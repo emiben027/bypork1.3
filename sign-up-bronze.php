@@ -413,7 +413,7 @@ if(isset($_POST['submit'])){
     <div class="form-group">
       <label id="name-label">Bronze* </span></label>
       <small>Specify amount from 100000 - 299999</small>
-      <input type="text" name="range" id="amount" class="form-control" value="<?php echo($_POST['amount']);?>" min="100000" max="299999" placeholder="100000" pattern="[1-2]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}" required> 
+      <input type="text" name="range" id="amount" class="form-control" value="" min="100000" max="299999" placeholder="100000" pattern="[1-2]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}" required> 
     </div>
 
     <div class="form-group">

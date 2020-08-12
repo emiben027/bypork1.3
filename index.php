@@ -258,7 +258,7 @@ if(isset($_POST['submit'])){
                             data-frame_0="x:50,50,31,19;"
                             data-frame_1="e:Linear.easeNone;st:820;sp:600;sR:820;"
                             data-frame_999="o:0;st:w;sR:7580;"
-                            >Bypork is a pig farming entreprise with a social initiative to combat protein deficiency in Africa through pork production  
+                            >Bypork is a pig farming entreprise with a social initiative to combat protein deficiency<br> in Africa through pork production  
                         </rs-layer>
                         <a
                             id="slider-2-slide-1-layer-3" 
@@ -649,7 +649,7 @@ if(isset($_POST['submit'])){
                         </div>
                          <div class="ttm-pricing-plan ttm-pricing-plan-col box-shadow text-left clearfix">
                                 <div class="ttm-featured-title"><i class="fa fa-star"></i>MOST POPULAR</div>
-                                <div class="ttm-ptablebox-title"><h3>LAUNCH OFFER</h3></div><!--title-->
+                                <div class="ttm-ptablebox-title"><h3>SPECIAL OFFER</h3></div><!--title-->
                                 <div class="ttm-ptablebox-desc">Designed for businesses with standard health requirements</div>
                                 <div class="ttm-ptablebox-content">
                                     <div class="ttm-ptablebox-price-w">
