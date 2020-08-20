@@ -290,7 +290,7 @@
                             data-frame_0="x:50,50,31,19;"
                             data-frame_1="e:Linear.easeNone;st:590;sp:800;sR:590;"
                             data-frame_999="o:0;st:w;sR:7610;"
-                            >We give 10% to <strong class="ttm-textcolor-skincolor fw-600">Charity</strong> 
+                            >Give 10% to <strong class="ttm-textcolor-skincolor fw-600">Charity</strong> 
                         </rs-layer>
                         <rs-layer
                             id="slider-2-slide-2-layer-2"
