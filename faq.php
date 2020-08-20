@@ -213,10 +213,10 @@
                                 <img class="img-fluid" src="images/static-img.png" title="single-img-eight" alt="single-img-eight">
                             </div><!-- ttm_single_image-wrapper end -->
                             <div class="ttm-play-icon-btn ttm-play-icon-btn-center">
-                                <div class="ttm-play-icon-animation">
-                                    <a href="https://www.youtube.com/watch?v=N4hO_0Sd0hM&t=5s" target="_self">
-                                        <div class="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-md ttm-icon_element-style-round">
-                                            <i class="ti ti-control-play"></i>
+                                <div class="ttm-play-icon-btn ttm-play-icon-btn-center style1">
+                                    <a href="https://youtu.be/b8mVodTGYDM" target="_self" class="ttm_prettyphoto">
+                                        <div class="ttm-icon ttm-icon_element-color-white ttm-icon_element-size-md z-1">
+                                            <i class="flaticon flaticon-play-button-1"></i>
                                         </div>
                                     </a>
                                 </div>
