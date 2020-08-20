@@ -1,15 +1,44 @@
+<?php
+
+$reference="5";
+function getName ($reference){
+  $characters='1234567890BYPRKSAVEFIC';
+  $randomString='';
+
+  for ($i=0;$i<$reference;$i++){
+    $index = rand(0,strlen($characters)-1);
+    $randomString .=$characters[$index];
+  }
+  return $randomString;
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- bypork.com -->
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175636476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175636476-1');
+</script>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Bypork - Saving Africa With Pork" />
+<meta name="keywords" content="BYPORK SAVE AFRICA MAKE LOTS OF MONEY" />
+<meta name="description" content="Bypork - Save Africa. Make Lots Of Money." />
 <meta name="author" content="https://www.bypork.com/" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Bypork - Saving Africa With Pork</title>
+<title>Bypork - Save Africa. Make Lots Of Money.</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="images/logoicon.png" />
@@ -135,9 +164,6 @@
                             <div class="container">
                                 <!--site-navigation -->
                                 <div id="site-navigation" class="site-navigation">
-                                   <div class="ttm-custombutton">
-                                       <a href="invest.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
-                                    </div>
                                     <div class="ttm-menu-toggle">
                                         <input type="checkbox" id="menu-toggle-form" />
                                         <label for="menu-toggle-form" class="ttm-menu-toggle-block">
@@ -238,7 +264,7 @@
                                                     <h5 class="mb-5">We Farm</h5>
                                                 </div>
                                                 <div class="featured-desc"><!--  featured-desc -->
-                                                    <p> Buy, feed, nurture, insure and sell the pigs.</p>
+                                                    <p>We feed, nurture, insure and sell the pigs.</p>
                                                 </div>
                                             </div>
                                         </div><!--  featured-icon-box END -->
@@ -290,7 +316,7 @@
                             <!--ttm-pricing-plan-->
                             <div class="ttm-pricing-plan box-shadow text-left clearfix">
                                 <div class="ttm-ptablebox-title"><h3>Bronze</h3></div><!--title-->
-                                <div class="ttm-ptablebox-desc">N100,000 - N299,999</div>
+                                <div class="ttm-ptablebox-desc">₦100,000 - ₦299,999</div>
                                 <div class="ttm-ptablebox-content">
                                     <div class="ttm-ptablebox-price-w">
                                         
@@ -305,16 +331,20 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="price_btn">
-                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-grey mb-20 w-100" href="sign-up-bronze.php">Invest</a>
-                                </div>
+                                <form method="post" action="sign up bronze plan.php">
+                                  <div class="form-group">
+                                    <input type="hidden" name="refid" id="refid" value="<?php echo($_GET['refid']);?>">
+                                    <input type="hidden" name="reference" id="reference" value="<?php echo getName ($reference);?>">
+                                    <button type="submit" id="start" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor w-100" value=""> Invest </button>
+                                  </div>
+                                </form>
                             </div><!--ttm-pricing-plan-->
                         </div>
                         <div class="col-md-4">
                             <!--ttm-pricing-plan-->
                             <div class="ttm-pricing-plan box-shadow text-left clearfix">
                                 <div class="ttm-ptablebox-title"><h3>Silver</h3></div><!--title-->
-                                <div class="ttm-ptablebox-desc">N300,000 - N599,999</div>
+                                <div class="ttm-ptablebox-desc">₦300,000 - ₦599,999</div>
                                 <div class="ttm-ptablebox-content">
                                     <div class="ttm-ptablebox-price-w">
                                         
@@ -329,16 +359,20 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="price_btn">
-                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-grey mb-20 w-100" href="sign-up-silver.php">Invest</a>
-                                </div>
+                                <form method="post" action="sign up silver plan.php">
+                                  <div class="form-group">
+                                    <input type="hidden" name="refid" id="refid" value="<?php echo($_GET['refid']);?>">
+                                    <input type="hidden" name="reference" id="reference" value="<?php echo getName ($reference);?>">
+                                    <button type="submit" id="start" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor w-100" value=""> Invest </button>
+                                  </div>
+                                </form>
                             </div><!--ttm-pricing-plan-->
                         </div>
                         <div class="col-md-4">
                             <!--ttm-pricing-plan-->
                             <div class="ttm-pricing-plan box-shadow text-left clearfix">
                                 <div class="ttm-ptablebox-title"><h3>Gold</h3></div><!--title-->
-                                <div class="ttm-ptablebox-desc">N600,000 - N2,000,000</div>
+                                <div class="ttm-ptablebox-desc">₦600,000 - ₦2,000,000</div>
                                 <div class="ttm-ptablebox-content">
                                     <div class="ttm-ptablebox-price-w">
                                         
@@ -353,9 +387,13 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="price_btn">
-                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-grey mb-20 w-100" href="sign-up-gold.php">Invest</a>
-                                </div>
+                                <form method="post" action="sign up gold plan.php">
+                                  <div class="form-group">
+                                    <input type="hidden" name="refid" id="refid" value="<?php echo($_GET['refid']);?>">
+                                    <input type="hidden" name="reference" id="reference" value="<?php echo getName ($reference);?>">
+                                    <button type="submit" id="start" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor w-100" value=""> Invest </button>
+                                  </div>
+                                </form>
                             </div><!--ttm-pricing-plan-->
                         </div>
                     </div>
@@ -426,7 +464,7 @@
                             <ul class="download">
                                 <li>
                                     <i class="fa fa-file-pdf-o"></i>
-                                    <a href="bypork.pdf" title="download our Proposal">Proposal</a>
+                                    <a href="files/bypork.pdf" title="Download our Proposal">Proposal</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-file-video-o"></i>
@@ -490,7 +528,6 @@
                                 <div class="">
                                     <p>Bypork is a pig farming entreprise with a social initiative to combat protein deficiency in Africa through pork production.</p>
                                     <hr>
-                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="map.php">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -562,9 +599,6 @@
         <!--footer end-->
 
         <!--back-to-top start-->
-        <a id="totop" href="#top">
-            <i class="fa fa-angle-up"></i>
-        </a>
         <!--back-to-top end-->
 
     </div><!-- page end -->
@@ -584,6 +618,20 @@
         <script src="js/main.js"></script>
 
         <!-- Javascript end-->
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8294195.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+<!-- Cookie Consent by https://www.TermsFeed.com -->
+<script type="text/javascript" src="//www.termsfeed.com/public/cookie-consent/3.1.0/cookie-consent.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"light","language":"en","website_name":"bypork.com"});
+});
+</script>
+
+<noscript>Cookie Consent by <a href="https://www.TermsFeed.com/" rel="nofollow noopener">TermsFeed</a></noscript>
+<!-- End Cookie Consent -->
 
 </body>
 

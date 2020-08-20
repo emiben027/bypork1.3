@@ -168,7 +168,7 @@ body {
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    color: #767a7de0;
+    color: #2c2f31e0;
     background-color: #fff;
     letter-spacing: 0px;
 }
@@ -719,7 +719,7 @@ div.product ul.tabs li a:before,
 .ttm-header-style-02 .ttm-header-icons .ttm-header-search-link a:hover,
 .top-contact.ttm-highlight-left:after, 
 .top-contact.ttm-highlight-right:after{
-  background-color: #5ea0de ;
+  background-color: rgba(30, 106, 204, 0.84) ;
 }
 
 /** Skin-border-color **/
@@ -1850,8 +1850,8 @@ ul.contact-widget-wrapper li i {
 div.ttm-page-title-row > .ttm-bg-layer { background-color: rgba(24,35,51,0.85); }
 .ttm-page-title-row { 
     display: block;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     z-index: 11;
 }
 .title-box .page-title-heading h1 {

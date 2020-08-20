@@ -1,15 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- bypork.com -->
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175636476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175636476-1');
+</script>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Bypork - Saving Africa With Pork" />
+<meta name="keywords" content="BYPORK SAVE AFRICA MAKE LOTS OF MONEY" />
+<meta name="description" content="Bypork - Save Africa. Make Lots Of Money." />
 <meta name="author" content="https://www.bypork.com/" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Bypork - Saving Africa With Pork</title>
+<title>Bypork - Save Africa. Make Lots Of Money.</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="images/logoicon.png" />
@@ -136,7 +147,7 @@
                                 <!--site-navigation -->
                                 <div id="site-navigation" class="site-navigation">
                                     <div class="ttm-custombutton">
-                                       <a href="invest.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
+                                       <a href="pig-farming.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
                                     </div>
                                     <div class="ttm-menu-toggle">
                                         <input type="checkbox" id="menu-toggle-form" />
@@ -271,7 +282,7 @@
                                                 </div>
                                                 <div class="featured-content">
                                                     <div class="featured-title"><h5>You fund</h5></div>
-                                                    <div class="ttm-box-description">Invest with us</div>
+                                                    <div class="ttm-box-description">Easily Fund a Pig Farm with us. No Passwords or Login worries, we maintain a system that keeps our investors at ease.</div>
                                                 </div>
                                             </div>
                                             <div class="ttm-processbox text-center">
@@ -307,7 +318,7 @@
                                                 </div>
                                                 <div class="featured-content">
                                                     <div class="featured-title"><h5>We gift</h5></div>
-                                                    <div class="ttm-box-description">We use 10% of the returns to fund free learning and the welfare of the underprivileged children in our community.</div>
+                                                    <div class="ttm-box-description">10% of investment in form of pork goes to the less privledged in our community.</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -337,7 +348,7 @@
                             <div class="cta_wrapper">
                                 <div class="ttm-quicklink-box">
                                    <div class="ttm-leftlink-box">
-                                       <h5 class="custom-heading"><a href="brand-rep.php"> <span class="ti ti-arrow-circle-left ttm-arrow-box"></span> Register As An Agent</a></h5>
+                                       <h5 class="custom-heading"><a href="brand-rep.php"> <span class="ti ti-arrow-circle-left ttm-arrow-box"></span> Register As A Brand Rep</a></h5>
                                        <i class="flaticon flaticon-house ttm-textcolor-skincolor"></i>
                                   </div>    
                                 </div>
@@ -372,7 +383,6 @@
                                 <div class="">
                                     <p>Bypork is a pig farming entreprise with a social initiative to combat protein deficiency in Africa through pork production.</p>
                                     <hr>
-                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="map.php">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>

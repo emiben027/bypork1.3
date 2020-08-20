@@ -1,16 +1,17 @@
 <?php
 
-$refnum="8";
-function getName ($refnum){
-  $characters='123456789BYPRK';
+$reference="5";
+function getName ($reference){
+  $characters='1234567890BYPRKSAVEFIC';
   $randomString='';
 
-  for ($i=0;$i<$refnum;$i++){
+  for ($i=0;$i<$reference;$i++){
     $index = rand(0,strlen($characters)-1);
     $randomString .=$characters[$index];
   }
   return $randomString;
 }
+
 
 ?>
 
@@ -20,13 +21,23 @@ function getName ($refnum){
 
 <!-- bypork.com -->
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175636476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175636476-1');
+</script>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Bypork - Saving Africa With Pork" />
+<meta name="keywords" content="BYPORK SAVE AFRICA MAKE LOTS OF MONEY" />
+<meta name="description" content="Bypork - Save Africa. Make Lots Of Money." />
 <meta name="author" content="https://www.bypork.com/" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Bypork - Saving Africa With Pork</title>
+<title>Bypork - Save Africa. Make Lots Of Money.</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="images/logoicon.png" />
@@ -154,7 +165,7 @@ function getName ($refnum){
                                 <!--site-navigation -->
                                 <div id="site-navigation" class="site-navigation">
                                     <div class="ttm-custombutton">
-                                       <a href="invest.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
+                                       <a href="pig-farming.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
                                     </div>
      
                                     <div class="ttm-menu-toggle">
@@ -167,7 +178,7 @@ function getName ($refnum){
                                     </div>
                                     <nav id="menu" class="menu">
                                         <ul class="dropdown">
-                                           <li><a href="index.php">Home</a></li>
+                                           <li class="active"><a href="index.php">Home</a></li>
                                            <li><a href="about-us.php">About Us</a></li>
                                             <li><a href="#">Services</a>
                                                 <ul>
@@ -176,8 +187,8 @@ function getName ($refnum){
                                                 </ul>
                                             </li>
                                             <li><a href="contact-us.php">Contact Us</a></li>
-                                            <li class="active"><a href="blog.php">Blog</a></li>
-                                            
+                                            <li><a href="blog.php">Blog</a></li>
+                                            <li><a href="faq.php">FAQ</a></li>
                                         </ul>
                                     </nav>
                                 </div><!-- site-navigation end-->
@@ -195,7 +206,7 @@ function getName ($refnum){
                     <div class="col-md-12"> 
                         <div class="title-box text-left">
                             <div class="page-title-heading">
-                                <h1 class="title">Single Service Details</h1>
+                                <h1 class="title">Special Offer</h1>
                             </div><!-- /.page-title-captions -->
                             
                         </div>
@@ -218,7 +229,7 @@ function getName ($refnum){
                                 <div class="product-gallery images">
                                     <figure class="ttm-product-gallery__wrapper">
                                         <div class="product-gallery__image">
-                                            <img class="img-fluid" src="images/product/product-two.jpg" alt="product-img">
+                                            <img class="img-fluid" src="images/product/product-one.jpg" alt="product-img">
                                         </div>
                                     </figure>
                                 </div>
@@ -227,23 +238,25 @@ function getName ($refnum){
                 
                                     <p class="price">
                                         <span class="Price-amount amount">
-                                            <span class="Price-currencySymbol">NGN</span>100,000
-                                        </span>
+                                            <span class="Price-currencySymbol">₦</span><b>100,000</b>
+                                        </span><span>/Unit</span> 
                                     </p>
+                                    <hr>
+                                    <p>
+                                        <h6>20% ROI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 months</h6>
+                                    </p>
+                                    <hr>
                                     <div class="product-details__short-description">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                                        <p>In 2017, $3Billion worth of pork was consumed in West Africa alone. Around 80% of that figure was imported. By investing in Bypork, you can help increase the volume of locally produced pork, boost the economy and reduce the price of pork in the region.</p>
                                     </div>
-                                    <div>
-                                </div>
                             </div>
+                            <h2>Slots:<b>  94</b></h2>
+                            <p></p>
                             <div>
- <form role="form" method="post" action="sign-up-special-plan.php">
+ <form role="form" method="post" action="sign up special plan.php">
     <div class="row">
       <div class="span4">
-        <input type="number" class="form-control" data-variavel="slot"  maxlength="1" value="1" name="slot" id="slot" min="1" max="5" required>
-      </div>
-      <div class="span4">
-        <button id="go" name="add-to-cart" type="submit" class="cart_button ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-darkgrey" title="Submit now">INVEST</button>
+        <input type="number" class="form-control" data-variavel="slot"  maxlength="1" size="1" step="1" name="slot" id="slot" min="1" max="20" inputmode="numeric" pattern="[0-9]*" value="1" title="select number of slot" required>
       </div>
       <div class="span4">
         <input type="hidden" class="form-control" data-variavel="price" name="price" id="price" value="100000" required>
@@ -256,15 +269,13 @@ function getName ($refnum){
         <input type="hidden" class="form-control" data-variavel="roi" value="120000" required>
       </div>
       <div class="span4">
-        <input type="text" name="amount" id="amount" class="form-control" data-formula="#slot# * #price#" placeholder="100000" required readonly>
+        <input type="text" name="amount" id="amount" class="form-control" data-formula="#slot# * #price#" value="100000" readonly>
       </div>
       <div class="span4">
-        <label >ROI
-        </label>
-        <input type="text" class="form-control" data-formula="#roi# * #slot#" placeholder="120000" readonly>
+        <button id="go" name="add-to-cart" type="submit" class="cart_button ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-darkgrey">INVEST</button>
       </div>
       <div>
-          <input type="hidden" name="refnum" id="refnum" value="<?php echo getName ($refnum);?>">
+          <input type="hidden" name="reference" id="reference" value="<?php echo getName ($reference);?>">
       </div>
       <div>
           <input type="hidden" name="refid" id="refid" value="<?php echo($_GET['refid']);?>">
@@ -272,27 +283,33 @@ function getName ($refnum){
     </div>
     </div>
   </form>
-                            </div>
+        <div></div>
+                         </div>
                             <div class="ttm-tabs tabs-for-single-products" data-effect="fadeIn">
-                                <ul class="tabs clearfix">
-                                    <li class="tab active"><a href="#">Amount</a></li>
-                                    <li class="tab"><a href="#">Interest</a></li>
-                                    <li class="tab"><a href="#">ROI</a></li>
-                                </ul>
                                 <div class="content-tab ttm-bgcolor-white">
                                     <!-- content-inner -->
                                     <div class="content-inner active">
-                                        <h2>Description</h2>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                                        <h2>Return On Investment</h2>
+                                        
+                                        <div class="span4">
+        <input type="text" class="form-control" data-formula="#roi# * #slot#" placeholder="120000" readonly>
+      </div>
+      <p></p>
+      <p><b>Invest Today. Get ROI On <?php echo (new\DateTime())->add(new\DateInterval('P6M'))->format('d M Y'); ?></b></p>
+      <hr>
+
+                                        <p> When you invest, you also gift 10% of your investment to an<br> orphanage/motherless home or poor family in form of pork so they<br> can enjoy healthy delicious protein.</p>
+                                        <b>Breakdown on fund usage:</b>
+                                            <ol>
+                                                <li><i class="fa fa-check-circle-o"></i> &nbsp;Purchase of Piglets.</li>
+                                                <li><i class="fa fa-check-circle-o"></i> &nbsp;Building of pens and farm equipments.</li>
+                                                <li><i class="fa fa-check-circle-o"></i> &nbsp;Vaccine and medication.</li>
+                                                <li><i class="fa fa-check-circle-o"></i> &nbsp;Insurance with our client <a href="leadway.com"> LEADWAY</a>. &nbsp;Documents are sent to you via email within 5 working days.</li>
+                                                <li><i class="fa fa-check-circle-o"></i> &nbsp;10% gift to an orphanage/motherless home or poor family.</li>
+                                            </ol>
                                     </div><!-- content-inner end-->
                                     <!-- content-inner -->
-                                    <div class="content-inner">
-                                        <h2>Additional information</h2>
-                                        <table class="shop_attributes">
-                                            <tbody><tr><th>color</th><td><p>Blue</p></td></tr></tbody>
-                                        </table>
-                                    </div><!-- content-inner end-->
+                                    <!-- content-inner end-->
                                     <!-- content-inner -->
                                     <div class="content-inner">
                                         <div id="reviews" class="woocommerce-Reviews">
@@ -315,7 +332,7 @@ function getName ($refnum){
                                                                     <time class="woocommerce-review__published-date" datetime="2018-11-01T04:58:58+00:00">November 1, 2018</time>
                                                                 </p>
                                                                 <div class="description">
-                                                                    <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante<br>Very good product and amazing quality.</p>
+                                                                    <p>/p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -362,12 +379,12 @@ function getName ($refnum){
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <input id="comment-cookies-consent" name="comment-cookies-consent" type="checkbox" value="yes">
-                                                                <label for="comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+                                                                <label for="comment-cookies-consent"></label>
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <div class="form-group text-left mt-30">
                                                                     <button type="submit" id="submit" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-darkgrey" value="">
-                                                                        Submit
+                                                                        
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -381,63 +398,37 @@ function getName ($refnum){
                             </div>
                         </div>
                         <div class="related products">
-                            <h3>Related products</h3>
                             <div class="row">
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="product"><!-- product -->
                                         <div class="product-thumbnail"><!-- product-thumbnail -->
-                                            <img class="img-fluid w-100" src="images/product/product-one.jpg" alt="">
+                                            <span class="onsale">Available!</span>
+                                            <img class="img-fluid w-100" src="images/product/product-two.jpg" alt="">
                                             <div class="ttm-shop-icon"><!-- ttm-shop-icon -->
-                                                <div class="product-btn add-to-cart-btn"><a href="#">ADD TO CART</a></div>
+                                                <div class="product-btn add-to-cart-btn"><a href="sign up bronze plan.php">INVEST</a></div>
                                             </div>
                                         </div><!-- product-thumbnail end -->
                                         <div class="product-content text-left"><!-- product-content -->
                                             <div class="product-title"><!-- product-title -->
-                                                <h2><a href="product-details.html">Album</a></h2>
+                                                <h3>Bronze</h3>
                                             </div>
-                                            <div class="ttm-ratting-star"><!-- ratting-star -->
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <span class="product-price"><!-- product-Price -->
-                                                <span class="product-Price-currencySymbol">$</span>16.00
-                                            </span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="product"><!-- product -->
                                         <div class="product-thumbnail"><!-- product-thumbnail -->
-                                            <span class="onsale">Sale!</span>
-                                            <img class="img-fluid w-100" src="images/product/product-two.jpg" alt="">
+                                            <span class="onsale">Available!</span>
+                                            <img class="img-fluid w-100" src="images/product/product-three.jpg" alt="">
                                             <div class="ttm-shop-icon"><!-- ttm-shop-icon -->
-                                                <div class="product-btn add-to-cart-btn"><a href="#">ADD TO CART</a></div>
+                                                <div class="product-btn add-to-cart-btn"><a href="sign up silver plan.php">INVEST</a></div>
                                             </div>
                                         </div><!-- product-thumbnail end -->
                                         <div class="product-content text-left"><!-- product-content -->
                                             <div class="product-title"><!-- product-title -->
-                                                <h2><a href="product-details.html">Beanie with Logo</a></h2>
-                                            </div>
-                                            <div class="ttm-ratting-star"><!-- ratting-star -->
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
+                                                <h3>Silver</h3>
                                             </div>
                                             <span class="product-price"><!-- product-Price -->
-                                                <span class="product-Price-currencySymbol">
-                                                    <del><span class="product-Price-amount">
-                                                            <span class="product-Price-currencySymbol">$</span>20.00
-                                                        </span>
-                                                    </del>
-                                                    <ins><span class="product-Price-amount">
-                                                            <span class="product-Price-currencySymbol">$</span>18.00
-                                                        </span>
-                                                    </ins>
                                                 </span>
                                             </span>
                                         </div>
@@ -446,25 +437,16 @@ function getName ($refnum){
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="product"><!-- product -->
                                         <div class="product-thumbnail"><!-- product-thumbnail -->
-                                            <img class="img-fluid w-100" src="images/product/product-three.jpg" alt="">
+                                            <span class="onsale">Available!</span>
+                                            <img class="img-fluid w-100" src="images/product/product-four.jpg" alt="">
                                             <div class="ttm-shop-icon"><!-- ttm-shop-icon -->
-                                                <div class="product-btn add-to-cart-btn"><a href="#">ADD TO CART</a></div>
+                                                <div class="product-btn add-to-cart-btn"><a href="sign up gold plan.php">INVEST</a></div>
                                             </div>
                                         </div><!-- product-thumbnail end -->
                                         <div class="product-content text-left"><!-- product-content -->
                                             <div class="product-title"><!-- product-title -->
-                                                <h2><a href="product-details.html">Belt</a></h2>
+                                                <h3>Gold</h3>
                                             </div>
-                                            <div class="ttm-ratting-star"><!-- ratting-star -->
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <span class="product-price"><!-- product-Price -->
-                                                <span class="product-Price-currencySymbol">$</span>16.00
-                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -472,97 +454,28 @@ function getName ($refnum){
                         </div>
                     </div>
                     <div class="col-lg-3 widget-area">
-                        <aside class="widget widget-search">
-                            <form role="search" method="get" class="search-form" action="#">
-                                <div class="form-group">
-                                    <input name="search" type="text" class="form-control with-border" placeholder="Search....">
-                                    <i class="fa fa-search"></i>
+                            <aside class="widget widget_media_image">
+                                <div class="banner-img-box ttm-textcolor-white text-left">
+                                    <div class="featured-content featured-content-banner">
+                                        <i class="flaticon flaticon-call"></i>
+                                        <div class="featured-title ttm-box-title">
+                                            <h5>How Can We Help?</h5>
+                                        </div>
+                                        <div class="featured-desc">
+                                            <p>If you need any help, please<br> feel free to contact us.</p>
+                                        </div>
+                                        <ul>
+                                            <li><i class="fa fa-phone"></i>+234 8100 317 388</li>
+                                            <li><i class="fa fa-envelope-o"></i><a href="mailto:info@bypork.com">info@bypork.com</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </form>
-                        </aside>
-                        <aside class="widget widget-categories">
-                                <h3 class="widget-title">Product Categories</h3>
-                                <ul>
-                                    <li><a href="#">Dairy Farm</a><span>4</span></li>
-                                    <li><a href="#">Flower</a><span>2</span></li>
-                                    <li><a href="#">Gardening</a><span>1</span></li>
-                                    <li><a href="#">Tips &amp; Tricks</a><span>4</span></li>
-                                    <li><a href="#">Watering Plants</a><span>2</span></li>
-                                </ul>
                             </aside>
-                        <aside class="widget widget-top-rated-products">
-                            <h3 class="widget-title">Popular Product</h3>
-                            <ul class="">
-                                <li class="clearfix">
-                                    <a href="#"><img src="images/product/product-one.jpg" alt="">
-                                        <span class="product-title">Corn Tree</span>
-                                    </a>
-                                    <div class="ttm-ratting-star"><!-- ratting-star -->
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <span class="product-Price-amount amount"><span class="product-Price-currencySymbol">$</span>33.00</span>
-                                </li>
-                                <li class="clearfix">
-                                    <a href="#"><img src="images/product/product-two.jpg" alt="">
-                                        <span class="product-title">Fresh Okra</span>
-                                    </a>
-                                    <div class="ttm-ratting-star"><!-- ratting-star -->
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <span class="product-Price-amount amount">
-                                        <span class="product-Price-currencySymbol">
-                                                <del><span class="product-Price-amount">
-                                                        <span class="product-Price-currencySymbol">$</span>50.00
-                                                    </span>
-                                                </del>
-                                                <ins><span class="product-Price-amount">
-                                                        <span class="product-Price-currencySymbol">$</span>40.00
-                                                    </span>
-                                                </ins>
-                                            </span>
-                                    </span>
-                                </li>
-                                <li class="clearfix">
-                                    <a href="#"><img src="images/product/product-eight.jpg" alt="">
-                                        <span class="product-title">Green Broccoli</span>
-                                    </a>
-                                    <div class="ttm-ratting-star"><!-- ratting-star -->
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <span class="product-Price-amount amount"><span class="product-Price-currencySymbol">$</span>33.00</span>
-                                </li>
-                            </ul>
-                        </aside>
-                        <aside class="widget tagcloud-widget">
-                            <h3 class="widget-title">Tags</h3>
-                            <div class="tagcloud">
-                                <a href="#" class="tag-cloud-link">Bulbsplant</a>
-                                <a href="#" class="tag-cloud-link">Care</a>
-                                <a href="#" class="tag-cloud-link">Farm</a>
-                                <a href="#" class="tag-cloud-link">Gardening</a>
-                                <a href="#" class="tag-cloud-link">Gardens</a>
-                                <a href="#" class="tag-cloud-link">Landscaping</a>
-                                <a href="#" class="tag-cloud-link">Planting</a>
-                                <a href="#" class="tag-cloud-link">Seed Saving</a>
-                            </div>
-                        </aside>
-                    </div>
-                </div><!-- row end -->
+                        </div>
+                    </div><!-- row end -->
+                </div>
             </div>
-        </div>
-        <!-- sidebar end -->
+            <!-- sidebar end -->
     </div><!--site-main end-->
 
         <!--footer start-->
@@ -574,7 +487,7 @@ function getName ($refnum){
                             <div class="cta_wrapper">
                                 <div class="ttm-quicklink-box">
                                    <div class="ttm-leftlink-box">
-                                       <h5 class="custom-heading"><a href="#"> <span class="ti ti-arrow-circle-left ttm-arrow-box"></span> Find Our Nearest Office</a></h5>
+                                       <h5 class="custom-heading"><a href="contact-us.php"> <span class="ti ti-arrow-circle-left ttm-arrow-box"></span>Our Office</a></h5>
                                        <i class="flaticon flaticon-house ttm-textcolor-skincolor"></i>
                                   </div>    
                                 </div>
@@ -584,18 +497,9 @@ function getName ($refnum){
                             <div class="ttm-custom-ctabox">
                                 <div class="cta-bg-icon"><span class="flaticon-support"></span></div>
                                 <h3 class="ttm-cta-heading ttm-textcolor-skincolor">Call Us On</h3>
-                                <h5 class="ttm-cta-content">+123 456 789 0012</h5>
+                                <h5 class="ttm-cta-content">+234 8100 317 388</h5>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="cta_wrapper">
-                                <div class="ttm-quicklink-box">
-                                   <div class="ttm-rightlink-box">
-                                        <i class="flaticon flaticon-clock ttm-textcolor-skincolor"></i>
-                                        <h5 class="custom-heading"><a href="#"> Emergency Restorations <span class="ti ti-arrow-circle-right ttm-arrow-box"></span></a></h5>
-                                  </div>    
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -603,69 +507,7 @@ function getName ($refnum){
             <div class="second-footer ttm-textcolor-white">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
-                            <div class="widget widget_text  clearfix">
-                                <h3 class="widget-title"> About</h3>
-                                <div class="">
-                                    <p> bundled Html Template for who is passionate about farming and agriculture, gardening services related websites.</p>
-                                    <p>For everyone who is passionate about agro services, farm nurseries, farming & gardening tools suppliers and blogs.</p>
-                                    <hr>
-                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="#">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
-                            <div class="widget link-widget clearfix">
-                               <h3 class="widget-title">Useful Links</h3>
-                                <ul id="menu-footer-services">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Our Services</a></li>
-                                    <li><a href="#">Nomadic Herding</a></li>
-                                    <li><a href="#">Veterinary Services</a></li>
-                                    <li><a href="#">Commercial Plant</a></li>
-                                    <li><a href="#">Farm Labor Management</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
-                            <div class="widget widget_text clearfix">
-                                <h3 class="widget-title">Recent News</h3>
-                                <ul class="widget-post ttm-recent-post-list">
-                                    <li>
-                                        <a href="single-blog.html"><img src="images/blog/01.jpg" alt="post-img"></a>
-                                        <span class="post-date"><i class="fa fa-calendar"></i>May 01, 2019</span>
-                                        <a href="single-blog.html">Outdoor Vintage Flower Garden Decor</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-blog.html"><img src="images/blog/02.jpg" alt="post-img"></a>
-                                        <span class="post-date"><i class="fa fa-calendar"></i>May 03, 2019</span>
-                                        <a href="single-blog.html">Grow Your Own Yard Garden For Better Life</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-blog.html"><img src="images/blog/03.jpg" alt="post-img"></a>
-                                        <span class="post-date"><i class="fa fa-calendar"></i>May 05, 2019</span>
-                                        <a href="single-blog.html">Rural Infrastructure for Great Agriculture</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
-                            <div class="widget contact-widget">
-                                <h3 class="widget-title">Get in touch</h3>      
-                                <ul class="contact-widget-wrapper">
-                                    <li><i class="fa fa-map-marker"></i>4789 Melmorn Street,Zakila Ton <br> Mashintron Town</li>
-                                    <li><i class="fa fa-phone"></i>(+01) 123 456 7890 </li>
-                                    <li><i class="fa fa-envelope-o"></i><a href="mailto:info@example.com" target="_blank">info@example.com</a></li>
-                                </ul>
-                                <div class="social-icons circle social-hover">
-                                    <ul class="list-inline">
-                                        <li class="social-facebook"><a class="tooltip-top" target="_blank" href="#" data-tooltip="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li class="social-twitter"><a class="tooltip-top" target="_blank" href="#" data-tooltip="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li class="social-flickr"><a class=" tooltip-top" target="_blank" href="#" data-tooltip="flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-                                        <li class="social-linkedin"><a class=" tooltip-top" target="_blank" href="#" data-tooltip="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                       
                         </div>
                     </div>
                 </div>
@@ -687,9 +529,6 @@ function getName ($refnum){
         <!--footer end-->
 
         <!--back-to-top start-->
-        <a id="totop" href="#top">
-            <i class="fa fa-angle-up"></i>
-        </a>
         <!--back-to-top end-->
 
     </div><!-- page end -->
@@ -707,34 +546,29 @@ function getName ($refnum){
         <script src="js/jquery.prettyPhoto.js"></script>
         <script src="js/numinate.min6959.js?ver=4.9.3"></script>
         <script src="js/main.js"></script>
-        <script src="js/calcput.js"></script>
-        <script src="js/pluginlaunch2.js"></script>
-        <script src="assets/js/plugin.js"></script>
         <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
         <script src="js/jquery.formula.js"></script>
         <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  
 
 </script>
         <!-- Javascript end-->
 
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8294195.js"></script>
+<!-- End of HubSpot Embed Code -->
 
+<!-- Cookie Consent by https://www.TermsFeed.com -->
+<script type="text/javascript" src="//www.termsfeed.com/public/cookie-consent/3.1.0/cookie-consent.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"light","language":"en","website_name":"bypork.com"});
+});
+</script>
 
-
-
-
-
-
+<noscript>Cookie Consent by <a href="https://www.TermsFeed.com/" rel="nofollow noopener">TermsFeed</a></noscript>
+<!-- End Cookie Consent -->
 
 
 </body>

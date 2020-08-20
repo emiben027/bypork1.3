@@ -1,53 +1,25 @@
-<?php
-
-$success=""; //remember to call success in form
-
-if(isset($_POST['submit'])){
-  require 'phpmailer/PHPMailerAutoload.php'; //confirm directory 
-  $mail = new PHPMailer;
-
- 
-  $mail->Host='smtp.privateemail.com';
-  $mail->Port=587;
-  $mail->SMTPAuth=true;
-  $mail->SMTPSecure='tls';
-  $mail->Username='emmie027@gmail.om'; //email address you want to send from
-  $mail->Password='emmieben27';
-
-
-  $mail->setFrom($_POST['email'],$_POST['name']);
-  $mail->addAddress('bypork@telegmail.com'); //email address you want to send to
-  $mail->addReplyTo($_POST['email'],$_POST['name']);
-
-
-  $mail->isHTML(true);
-  $mail->Subject='Brand Rep Form Submission:  '.$_POST['subject'];
-  $mail->Body='<h6 align=center>Name :'.$_POST['name'].'<br>Phone :'.$_POST['phone'].'<br>Email: '.$_POST['email'].'<br>Message: '.$_POST['message'].'</h6>';  //declare all var to be sent
-
-
-  if(!$mail->send()){
-    $success="Something Went Wrong. Please try again."; 
-  }
-  else{
-    $success="Thanks".$_POST.$_POST['name']." your message has been sent we will get back to you soon!";
-  }
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- bypork.com -->
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175636476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175636476-1');
+</script>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Bypork - Saving Africa With Pork" />
+<meta name="keywords" content="BYPORK SAVE AFRICA MAKE LOTS OF MONEY" />
+<meta name="description" content="Bypork - Save Africa. Make Lots Of Money." />
 <meta name="author" content="https://www.bypork.com/" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Bypork - Saving Africa With Pork</title>
+<title>Bypork - Save Africa. Make Lots Of Money.</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="images/logoicon.png" />
@@ -83,6 +55,10 @@ if(isset($_POST['submit'])){
 
 <!-- responsive -->
 <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<?php include('contact-process.php');?>
 
 </head>
 
@@ -173,7 +149,7 @@ if(isset($_POST['submit'])){
                                 <!--site-navigation -->
                                 <div id="site-navigation" class="site-navigation">
                                    <div class="ttm-custombutton">
-                                       <a href="invest.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
+                                       <a href="pig-farming.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
                                     </div>
                                     <div class="ttm-menu-toggle">
                                         <input type="checkbox" id="menu-toggle-form" />
@@ -288,6 +264,7 @@ if(isset($_POST['submit'])){
                 </div>
             </section>
             <!-- contactbox-section end -->
+          
             <!-- contactbox-section -->
             <section class="ttm-row contact-form-section clearfix">
                 <div class="container">
@@ -309,37 +286,38 @@ if(isset($_POST['submit'])){
                                         <form id="ttm-quote-form" class="row ttm-quote-form clearfix" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="form-group">
-                                                    <input name="name" type="text" class="form-control with-border bg-white" placeholder="Full Name*" value="">
+                                                    <input name="name" id="name" type="text" class="form-control with-border bg-white" placeholder="Name*" maxlength="40" size="40" minlength="2" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="form-group">
-                                                    <input name="phone" type="text" placeholder="Phone Number*"  class="form-control with-border bg-white" value="">
+                                                    <input name="phone" id="phone" type="text" placeholder="Phone Number*"  class="form-control with-border bg-white"  minlength="9" maxlength="13" size="14" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="form-group">
-                                                    <input name="email" type="text" placeholder="Email Address*"  class="form-control with-border bg-white" value="">
+                                                    <input name="email" id="email" type="text" placeholder="Email Address*"  class="form-control with-border bg-white" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="form-group">
-                                                    <input name="subject" type="text" placeholder="Subject" class="form-control with-border bg-white" value="">
+                                                    <input name="subject" id="subject" type="text" placeholder="Subject" class="form-control with-border bg-white">
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-12 col-md-12">
                                                 <div class="form-group">
-                                                    <textarea name="message" rows="4" placeholder="Write A Message..." class="form-control with-border bg-white" type="text" maxlength="1000" value="message" ></textarea>
+                                                    <textarea name="message" id="message" rows="4" placeholder="Write A Message..." class="form-control with-border bg-white" type="text" maxlength="1000" value="message" required></textarea>
                                                 </div>
                                             </div>
+                                             <div class="g-recaptcha" data-sitekey="6LdwarsZAAAAAG3u4cp1YNguZFeZTc8QhaN8k-e3"></div>
+                                            <br/>
                                             <div class="col-md-12">
                                                 <div class="text-left">
                                                     <button type="submit" id="submit" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-darkgrey w-100" value="">
                                                         Submit 
                                                     </button>
                                                 </div>
-                                                <div class="success"><?= $success; ?></div>
                                             </div>
                                         </form>
                                     </div>
@@ -400,7 +378,6 @@ if(isset($_POST['submit'])){
                                 <div class="">
                                     <p>Bypork is a pig farming entreprise with a social initiative to combat protein deficiency in Africa through pork production.</p>
                                     <hr>
-                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="map.php">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -471,9 +448,6 @@ if(isset($_POST['submit'])){
         <!--footer end-->
 
         <!--back-to-top start-->
-        <a id="totop" href="#top">
-            <i class="fa fa-angle-up"></i>
-        </a>
         <!--back-to-top end-->
 
     </div><!-- page end -->
@@ -509,6 +483,15 @@ if(isset($_POST['submit'])){
             }
             google.maps.event.addDomListener(window, "load", initialize);
 
+        </script>
+
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8294195.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+           async defer>
         </script>
 
 </body>

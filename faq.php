@@ -1,15 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <!--bypork.com -->
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175636476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175636476-1');
+</script>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Bypork - Saving Africa With Pork" />
+<meta name="keywords" content="BYPORK SAVE AFRICA MAKE LOTS OF MONEY" />
+<meta name="description" content="Bypork - Save Africa. Make Lots Of Money." />
 <meta name="author" content="https://www.bypork.com/" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Bypork - Saving Africa With Pork</title>
+<title>Bypork - Save Africa. Make Lots Of Money.</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="images/logoicon.png" />
@@ -136,7 +147,7 @@
                                 <!--site-navigation -->
                                 <div id="site-navigation" class="site-navigation">
                                     <div class="ttm-custombutton">
-                                       <a href="invest.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
+                                       <a href="pig-farming.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
                                     </div>
                                     <div class="ttm-menu-toggle">
                                         <input type="checkbox" id="menu-toggle-form" />
@@ -227,19 +238,6 @@
                             <div class="accordion grey-background res-991-mt-30">
                                 <!-- toggle -->
                                 <div class="toggle">
-                                    <div class="toggle-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">How Safe is my investment?</a>
-                                    </div>
-                                    <div class="toggle-content">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <p class="mb-0">We would say more than 100% percent but that'd be a little low. Firstly, BYPORK is a duly registered company under JEJGREEN FARM ENTERPRISE with the Nigerian <a href="cac.gov.ng"><strong>CAC</strong></a>, meaning we have a reputation to protect and you can prosecute us if we fail to pay up. Also, all animals are insured under our insurrance partner <a href="leadway.com" alt="visit"><strong>Leadway Asurrance</strong></a> and our team has many years of experience farming and selling pigs to tell you that your investment will yield its return in due season.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- toggle end -->
-                                <!-- toggle -->
-                                <div class="toggle">
                                     <div class="toggle-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapsetwo" class="active"> Is there a legal backing for me?</a>
                                 </div>
                                     <div class="toggle-content">
@@ -252,11 +250,36 @@
                                 </div><!-- toggle end -->
                                 <!-- toggle -->
                                 <div class="toggle">
+                                    <div class="toggle-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">How Safe is my investment?</a>
+                                    </div>
+                                    <div class="toggle-content">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p class="mb-0">We would say more than 100% percent but that'd be a little low. Firstly, BYPORK is a duly registered company under JEJGREEN FARM ENTERPRISE with the Nigerian <a href="cac.gov.ng"><strong>CAC</strong></a>, meaning we have a reputation to protect and you can prosecute us if we fail to pay up. Also, all animals are insured under our insurrance partner <a href="leadway.com" alt="visit"><strong>Leadway Asurrance</strong></a> and our team has many years of experience farming and selling pigs so your investment will yield its return in due season.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- toggle end -->
+                                <!-- toggle -->
+                                <div class="toggle">
                                     <div class="toggle-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapsethree">Are the pigs insured</a></div>
                                     <div class="toggle-content">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <p class="mb-0">Once new animals enter the farm, we insure them with our insurance partners: Leadway assurance.</p>
+                                                <p class="mb-0">Once new animals enter the farm, we insure them with our insurance partners <a href="leadway.com" alt="visit"><strong>Leadway Asurrance</strong></a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- toggle end -->
+                                <!-- toggle -->
+                                <div class="toggle">
+                                    <div class="toggle-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapsethree">What If i loose my password and am unable to recover it,<br> How do I get my money?</a>
+                                </div>
+                                    <div class="toggle-content">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p class="mb-0">At Bypork you don't need to worry about account passwords and logins, we practice an easy funding account management system. We have unique identification for our investors. As an investor you invest and rest, we do the work and pay you with a bank acount you provide.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -268,7 +291,7 @@
                                     <div class="toggle-content">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <p class="mb-0">You're absolutely welcome. Just give us a <a href="+2348100317388" alt="+234 8100 317 388">call</a> for <a href="map.php" alt="map" >directions </a> or use our <a href="contact-us.php" alt="contact Us" >address</a> to locate us</p>
+                                                <p class="mb-0">You're absolutely welcome. Just give us a <strong><a href="+2348100317388" alt="+234 8100 317 388">call</a></strong> for directions or use our <strong><a href="contact-us.php" alt="contact Us" >address</a></strong> to locate us</p>
                                             </div>
                                         </div>
                                     </div>
@@ -304,7 +327,7 @@
                                     <div class="toggle-content">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <p class="mb-0">Yes.</p>
+                                                <p class="mb-0">Yes, but theres a maximum amount of investment for an investor per farming season.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -316,7 +339,7 @@
                                     <div class="toggle-content">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <p class="mb-0">Yes. Once you refer someone who invests in our farm, you'd be paid 3% of their investment.</p>
+                                                <p class="mb-0">Yes. Once you refer someone who invests in our farm, you'd be paid 5% of their investment.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -340,7 +363,7 @@
                                     <div class="toggle-content">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <p class="mb-0">No. We do all the work and you get paid.</p>
+                                                <p class="mb-0">No. We do all the work and you get your return on investment and you are welcome to visit the farm.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -352,11 +375,11 @@
                                     <div class="toggle-content">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <p class="mb-0">No. Becoming an investor with Bypork is the best way to give to the society. We give 10% of our profit in form of pork?</p>
+                                                <p class="mb-0">Yes. </p>
                                             </div>
                                         </div>
                                     </div>
-                                </div><!-- toggle end -->  
+                                </div><!-- toggle end --> 
                             </div><!-- acadion  end-->
                         </div>
                     </div>
@@ -407,7 +430,6 @@
                                 <div class="">
                                     <p>Bypork is a pig farming entreprise with a social initiative to combat protein deficiency in Africa through pork production.</p>
                                     <hr>
-                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="map.php">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -458,9 +480,6 @@
         <!--footer end-->
 
         <!--back-to-top start-->
-        <a id="totop" href="#top">
-            <i class="fa fa-angle-up"></i>
-        </a>
         <!--back-to-top end-->
 
     </div><!-- page end -->
@@ -480,6 +499,9 @@
         <script src="js/main.js"></script>
 
         <!-- Javascript end-->
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8294195.js"></script>
+<!-- End of HubSpot Embed Code -->
 
 </body>
 

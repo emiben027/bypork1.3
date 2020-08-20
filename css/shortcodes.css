@@ -2690,7 +2690,7 @@ ul.ttm-recent-post-list>li .post-date i{margin-right: 7px;font-size: 11px;}
 .ttm-single-product-details { background-color: #fff; margin-bottom: 30px;}
 .ttm-single-product-info{margin-bottom: 30px;}
 div.product.ttm-single-product-details div.images { width: 48%; float: left;}
-div.product.ttm-single-product-details div.summary { width: 48%; float: right;}
+div.product.ttm-single-product-details div.summary { width: 52%; float: right;}
 div.product.ttm-single-product-details .product-gallery__image img{ height: auto; max-width: 100%;}
 .ttm-single-product-details div.images .product-gallery__image:nth-child(n+2) {width: 25%; display: inline-block; margin-top: 4px;}
 .screen-reader-text {

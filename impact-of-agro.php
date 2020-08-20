@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +8,11 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Bypork - Saving Africa With Pork" />
+<meta name="keywords" content="BYPORK SAVE AFRICA MAKE LOTS OF MONEY" />
+<meta name="description" content="Bypork - Save Africa. Make Lots Of Money." />
 <meta name="author" content="https://www.bypork.com/" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Bypork - Saving Africa With Agriculture</title>
+<title>Bypork - Save Africa. Make Lots Of Money.</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="images/favicon.png" />
@@ -136,7 +139,7 @@
                                 <!--site-navigation -->
                                 <div id="site-navigation" class="site-navigation">
                                     <div class="ttm-custombutton">
-                                       <a href="invest.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
+                                       <a href="pig-farming.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
                                     </div>
                                     <div class="ttm-menu-toggle">
                                         <input type="checkbox" id="menu-toggle-form" />
@@ -331,7 +334,6 @@
                                 <div class="">
                                     <p>Bypork is a pig farming entreprise with a social initiative to combat protein deficiency in Africa through pork production.</p>
                                     <hr>
-                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="map.php">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -349,7 +351,7 @@
                                 <h3 class="widget-title">Recent News</h3>
                                 <ul class="widget-post ttm-recent-post-list">
                                     <li>
-                                        <a href="single-blog.php"><img src="images/blog/06.jpg" alt="post-img"></a>
+                                        <a href="raising-pigs.php"><img src="images/blog/06.jpg" alt="post-img"></a>
                                         <span class="post-date"><i class="fa fa-calendar"></i>July 20, 2020</span>
                                         <a href="raising-pigs.php">Raising Pigs</a>
                                     </li>
@@ -359,7 +361,7 @@
                                         <a href="impact-of-agro.php">Impact Of Agro-preneurship</a>
                                     </li>
                                     <li>
-                                        <a href="single-blog.php"><img src="images/blog/04.jpg" alt="post-img"></a>
+                                        <a href="pigs-for-wealth.php"><img src="images/blog/04.jpg" alt="post-img"></a>
                                         <span class="post-date"><i class="fa fa-calendar"></i>July 07, 2020</span>
                                         <a href="pigs-for-wealth.php">Pigs For Wealth</a>
                                     </li>

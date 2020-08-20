@@ -1,41 +1,9 @@
 <?php
 
-$result=""; //remember to call success in form
 
-if(isset($_POST['submit'])){
-  require 'phpmailer/PHPMailerAutoload.php'; //confirm directory 
-  $mail = new PHPMailer;
-
- 
-  $mail->Host='smtp.gmail.com';
-  $mail->Port=587;
-  $mail->SMTPAuth=true;
-  $mail->SMTPSecure='tls';
-  $mail->Username='emmie027@gmail.com'; //email address you want to send from
-  $mail->Password='emmieben27';
-
-
-  $mail->setFrom($_POST['email'],$_POST['name']);
-  $mail->addAddress('prometheustech@hi2.in'); //email address you want to send to
-  $mail->addReplyTo($_POST['email'],$_POST['name']);
-
-
-  $mail->isHTML(true);
-  $mail->Subject='Brand Rep Form Submission:  '.$_POST['subject'];
-  $mail->Body='<h6 align=center>Name :'.$_POST['name'].'<br>Email: '.$_POST['email'].'<br>Message: '.$_POST['msg'].'</h6>';  //declare all var to be sent
-
-
-  if(!$mail->send()){
-    $result="Something Went Wrong. Please try again."; 
-  }
-  else{
-    $result="Thanks".$_POST.$_POST['name']." your message has been sent we will get back to you soon!";
-  }
-}
-
-$refid="6";
+$refid="4";
 function getName ($refid){
-  $characters='123456789BYPRK';
+  $characters='12mnbvc456xzasd7fgh8jkp9iuyt3rewq';
   $randomString='';
 
   for ($i=0;$i<$refid;$i++){
@@ -45,19 +13,37 @@ function getName ($refid){
   return $randomString;
 }
 
+
+if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
+  {
+        $secret = '6LdwarsZAAAAAELxVVZLTvSwGAUJu3vI2DteHfEI';
+        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+        $responseData = json_decode($verifyResponse);
+        if($responseData->success)
+        {
+            $succMsg = 'Your contact request have submitted successfully.';
+        }
+        else
+        {
+            $errMsg = 'Robot verification failed, please try again.';
+        }
+   }
+
+
 ?>
 
 
-
-
+<!DOCTYPE html>
+<html lang="en">
+<!-- bypork.com -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template">
-<meta name="description" content="Bypork - Saving Africa With Pork">
+<meta name="keywords" content="BYPORK SAVE AFRICA MAKE LOTS OF MONEY">
+<meta name="description" content="Bypork - Save Africa. Make Lots Of Money.">
 <meta name="author" content="https://www.bypork.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Bypork - Saving Africa With Agriculture</title>
+<title>Bypork - Save Africa. Make Lots Of Money.</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="images/logoicon.png">
@@ -97,6 +83,7 @@ function getName ($refid){
 <!-- brand rep css -->
 <link rel="stylesheet" type="text/css" href="css/brand-rep.css">
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <!-- php process -->
 </head>
@@ -141,15 +128,11 @@ function getName ($refid){
     </div>
     <div class="form-group">
       <label id="email-label">Whatsapp Number*</label>
-      <input name="waphone" id="waphone" type="text" placeholder="+234" class="form-control" minlength="9" maxlength="13" size="14">
-    </div>
-    <div class="form-group">
-      <label id="name-label">Country*</label>
-      <input type="text" name="country" id="country" class="form-control" placeholder="what is your country?" value="">
+      <input name="waphone" id="waphone" type="text" placeholder="+234" class="form-control" minlength="9" maxlength="13" size="14" required>
     </div>
     <div class="form-group">
       <label id="number-label">Age*</label>
-      <input type="text" name="age" id="age" min="16" max="90" class="form-control" placeholder="18" value="" size="2" maxlength="2">
+      <input type="text" name="age" id="age" min="16" max="90" class="form-control" placeholder="18" value="" size="2" maxlength="2" required>
     </div>
     <div class="form-group">
       <p>Would you recommend our service to a friend?</p>
@@ -183,8 +166,7 @@ function getName ($refid){
       >
     <div class="form-group">
       <label id="name-label">Country*</label>     
-        
-            <select type="text" id="country" name="country" class="form-control" value="" >
+            <select type="text" id="country" name="country" class="form-control" value="" required>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
@@ -436,51 +418,21 @@ function getName ($refid){
       <label id="name-label">City*</label>
       <input type="text" name="city" id="city" class="form-control" placeholder="" value="" minlength="2" maxlength="20" size="20" pattern="[A-Za-z]{1,20}" required>
     </div>
-    <div class="form-group">
-      <label id="name-label">Bank Details*</label>
-      <input type="text" name="account" id="acount" class="form-control" placeholder="0012345678900" minlength="7"  maxlength="16" size="20" required>
-      <dir></dir>
-      <label>
-      <input type="text" name="bank" id="bank" class="form-control" placeholder="enter your banking institution" >
-    </label>
-    </div>
     <div>
-   <label>
-        <input
-          name="atype"
-          value="definitely"
-          type="radio"
-          class="input-radio"
-          checked
-          value=""
-        />Savings</label
-      >
-      <label>
-        <input
-          name="atype"
-          value="maybe"
-          type="radio"
-          class="input-radio"
-          value=""
-        />Current</label
-      >
-
-    </div>
     <dir></dir>
     <div class="form-group">
-      <p>Why do you want to join BYPORK?*</p>
-      <textarea type="text" id="comment" class="input-textarea" name="comment" placeholder="not less than 100 characters" minlength="100" size="300" value=""></textarea>
+    <p>Why do you want to join BYPORK?*</p>
+      <textarea type="text" id="comment" class="input-textarea" name="comment" placeholder="not less than 50 characters" minlength="50" size="200" value="" required></textarea>
     </div>
     <div class="form-group">
       <input type="hidden" name="refid" id="refid" class="form-control" placeholder="" value="<?php echo getName ($refid);?>"> 
     </div>
+    <div class="g-recaptcha" data-sitekey="6LdwarsZAAAAAG3u4cp1YNguZFeZTc8QhaN8k-e3"></div>
+      <br/>
     <div class="form-group">
-      <button type="submit" id="submit" class="submit-button">
-        Submit
+      <button type="submit" id="next" name="next" class="submit-button">
+        NEXT >>
       </button>
-      <div>
-      	<div class="success"><?= $result; ?></div>
-      </div>
     </div>
     <hr>
     <a href="contact-us.php"><span id="help">Help!</span></a>
@@ -501,8 +453,17 @@ function getName ($refid){
                 </div>
             </div>
         </footer>
-        <!--footer end-->
+
+
+        <!--javascript-->
+
+
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
 
 
 
 </body>
+</html>

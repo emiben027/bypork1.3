@@ -1,53 +1,25 @@
-<?php
-
-$success=""; //remember to call success in form
-
-if(isset($_POST['submit'])){
-  require 'phpmailer/PHPMailerAutoload.php'; //confirm directory 
-  $mail = new PHPMailer;
-
- 
-  $mail->Host='smtp.privateemail.com';
-  $mail->Port=587;
-  $mail->SMTPAuth=true;
-  $mail->SMTPSecure='tls';
-  $mail->Username='emmie027@gmail.om'; //email address you want to send from
-  $mail->Password='emmieben27';
-
-
-  $mail->setFrom($_POST['email'],$_POST['name']);
-  $mail->addAddress('bypork@telegmail.com'); //email address you want to send to
-  $mail->addReplyTo($_POST['email'],$_POST['name']);
-
-
-  $mail->isHTML(true);
-  $mail->Subject='Brand Rep Form Submission:  '.$_POST['subject'];
-  $mail->Body='<h6 align=center>Name :'.$_POST['name'].'<br>Phone :'.$_POST['phone'].'<br>Email: '.$_POST['email'].'<br>Message: '.$_POST['message'].'</h6>';  //declare all var to be sent
-
-
-  if(!$mail->send()){
-    $success="Something Went Wrong. Please try again."; 
-  }
-  else{
-    $success="Thanks".$_POST.$_POST['name']." your message has been sent we will get back to you soon!";
-  }
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- bypork.com -->
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175636476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175636476-1');
+</script>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Bypork - Saving Africa With Pork" />
+<meta name="keywords" content="BYPORK SAVE AFRICA MAKE LOTS OF MONEY" />
+<meta name="description" content="Bypork - Save Africa. Make Lots Of Money." />
 <meta name="author" content="https://www.bypork.com/" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Bypork - Saving Africa With Pork</title>
+<title>Bypork - Save Africa. Make Lots Of Money.</title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="images/logoicon.png" />
@@ -173,7 +145,7 @@ if(isset($_POST['submit'])){
                                 <!--site-navigation -->
                                 <div id="site-navigation" class="site-navigation">
                                    <div class="ttm-custombutton">
-                                       <a href="invest.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
+                                       <a href="pig-farming.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
                                     </div>
                                     <div class="ttm-menu-toggle">
                                         <input type="checkbox" id="menu-toggle-form" />
@@ -213,7 +185,7 @@ if(isset($_POST['submit'])){
                     <div class="col-md-12"> 
                         <div class="title-box text-left">
                             <div class="page-title-heading">
-                                <h1 class="title">Registration Sucesssful</h1>
+                                <h1 class="title">Registration</h1>
                             </div><!-- /.page-title-captions -->
                             
                         </div>
@@ -233,15 +205,15 @@ if(isset($_POST['submit'])){
                 <div class="container">
                     <div class="text-center">
                                 <h6 class="mb-0">Hello! <?php echo ($_POST['fname']);?>, Please copy and share your referral link. </h6>
-                                <p id="p1">http://bypork.com/special.php?refid=<?php echo ($_POST['refid']);?></p> 
-                   <button onclick="copyToClipboard('#p1')">Copy link</button> 
+                                <p id="p1">bypork.com/special.php?refid=<?php echo ($_POST['refid']);?></p> 
+                   <button class="ttm-btn ttm-btn-size-xs ttm-btn-shape-square ttm-btn-style-border ttm-icon-btn-right ttm-btn-color-darkgrey" onclick="copyToClipboard('#p1')">Copy link</button> 
                  <br/><br/>
                             </div>
                 </div>
-            </section>
-            <!-- contactbox-section end -->
-            <!-- contactbox-section -->
-            <section class="ttm-row contact-form-section clearfix">
+                <p class="text-center">Your Referral ID is <strong><?php echo ($_POST['refid']);?></strong></p>
+        
+
+        <section class="ttm-row contact-form-section clearfix">
                 <div class="container">
                     <div class="row"><!-- row -->
                         <div class="col-lg-12">
@@ -249,7 +221,7 @@ if(isset($_POST['submit'])){
                             <div class="section-title text-center clearfix">
                                 <div class="title-header">
                                     <h5>JOIN OTHER BRAND REPS</h5>
-                                    <h2 class="title">Connect To Bypork African Community</h2>
+                                    <h6 class="title">Connect To Bypork Brand Rep Group on telegram to complete your registration.</h6>
                                 </div>
                                 <div class="heading-seperator">
                                     <span></span>
@@ -257,28 +229,12 @@ if(isset($_POST['submit'])){
                             </div><!-- section title end -->
                         </div>
                     </div>
-                    <div class="row mt-30">
+                    <div class="row mt-30" >
                         <div class="col-sm-6 offset-md-1 col-md-5 col-lg-3 offset-lg-3">
-                            <!--  featured-icon-box --> 
-                            <div class="featured-icon-box style6 left-icon icon-align-top">
-                                <div class="featured-icon"><!--  featured-icon --> 
-                                    <div class="ttm-icon ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
-                                        <i class="fa fa-whatsapp"></i><!--  ttm-icon --> 
-                                    </div>
-                                </div>
-                                <div class="featured-content"><!--  featured-content -->
-                                    <div class="featured-title"><!--  featured-title -->
-                                        <a href="https://chat.whatsapp.com/EDLxpi23RznE5dyVhirXxw"><h5>What’s App group</h5></a>
-                                    </div>
-                                    <div class="featured-desc"><!--  featured-desc -->
-                                        <p class="">bypork</p>
-                                    </div>
-                                </div>
-                            </div><!--  featured-icon-box END -->
                         </div>
                         <div class="col-sm-6 col-md-5 col-lg-3">
                             <!--  featured-icon-box --> 
-                            <div class="featured-icon-box style6 left-icon icon-align-top">
+                            <div class="featured-icon-box style6 left-icon icon-align-top ">
                                 <div class="featured-icon"><!--  featured-icon --> 
                                     <div class="ttm-icon ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
                                         <i class="fa fa-telegram"></i><!--  ttm-icon --> 
@@ -286,15 +242,26 @@ if(isset($_POST['submit'])){
                                 </div>
                                 <div class="featured-content"><!--  featured-content -->
                                     <div class="featured-title"><!--  featured-title -->
-                                        <a href="t.me/bypork"><h5>Join Us</h5>
+                                        <a href="https://t.me/byporkreps"><h5>Telegram</h5></a>
                                     </div>
                                     <div class="featured-desc"><!--  featured-desc -->
-                                        <p class="">@bypork</p>
+                                        <a href="https://t.me/byporkreps"><p class="">@byporkreps</p></a>
                                     </div>
                                 </div>
                             </div><!--  featured-icon-box END -->
-                </div>
+                    </div>
             </section>
+
+
+
+
+
+
+
+            </section>
+            <!-- contactbox-section end -->
+            <!-- contactbox-section -->
+            
             <!-- contactbox-section end -->
             
             <!-- map-section end -->
@@ -306,16 +273,6 @@ if(isset($_POST['submit'])){
             <div class="first-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4">
-                            <div class="cta_wrapper">
-                                <div class="ttm-quicklink-box">
-                                   <div class="ttm-leftlink-box">
-                                       <h5 class="custom-heading"><a href="contact-us.php"> <span class="ti ti-arrow-circle-left ttm-arrow-box"></span> Visit Our Office</a></h5>
-                                       <i class="flaticon flaticon-house ttm-textcolor-skincolor"></i>
-                                  </div>    
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-lg-4">
                             <div class="cta_wrapper">
                                 <div class="ttm-quicklink-box">
@@ -338,41 +295,10 @@ if(isset($_POST['submit'])){
                                 <div class="">
                                     <p>Bypork is a pig farming entreprise with a social initiative to combat protein deficiency in Africa through pork production.</p>
                                     <hr>
-                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="map.php">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
-                            <div class="widget link-widget clearfix">
-                               <h3 class="widget-title">Useful Links</h3>
-                                <ul id="menu-footer-services">
-                                    <li><a href="about-us.php">About Us</a></li>
-                                    <li><a href="pig-farming.php">Our Services</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
-                            <div class="widget widget_text clearfix">
-                                <h3 class="widget-title">Recent News</h3>
-                                <ul class="widget-post ttm-recent-post-list">
-                                    <li>
-                                        <a href="single-blog.php"><img src="images/blog/06.jpg" alt="post-img"></a>
-                                        <span class="post-date"><i class="fa fa-calendar"></i>July 20, 2020</span>
-                                        <a href="raising-pigs.php">Raising Pigs</a>
-                                    </li>
-                                    <li>
-                                        <a href="impact-of-agro.php"><img src="images/blog/07.jpg" alt="post-img"></a>
-                                        <span class="post-date"><i class="fa fa-calendar"></i>July 13, 2020</span>
-                                        <a href="impact-of-agro.php">Impact Of Agro-preneurship</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-blog.php"><img src="images/blog/04.jpg" alt="post-img"></a>
-                                        <span class="post-date"><i class="fa fa-calendar"></i>July 07, 2020</span>
-                                        <a href="pigs-for-wealth.php">Pigs For Wealth</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                       
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                             <div class="widget contact-widget">
                                 <h3 class="widget-title">Get in touch</h3>      
@@ -409,9 +335,6 @@ if(isset($_POST['submit'])){
         <!--footer end-->
 
         <!--back-to-top start-->
-        <a id="totop" href="#top">
-            <i class="fa fa-angle-up"></i>
-        </a>
         <!--back-to-top end-->
 
     </div><!-- page end -->
@@ -431,6 +354,9 @@ if(isset($_POST['submit'])){
         <script src="js/main.js"></script>
 
         <!-- Javascript end-->
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8294195.js"></script>
+<!-- End of HubSpot Embed Code -->
 
         <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
         <script>

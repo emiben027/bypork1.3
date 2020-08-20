@@ -1,52 +1,26 @@
-<?php
-
-$success=""; //remember to call success in form
-
-if(isset($_POST['submit'])){
-  require 'phpmailer/PHPMailerAutoload.php'; //confirm directory 
-  $mail = new PHPMailer;
-
- 
-  $mail->Host='smtp.privateemail.com';
-  $mail->Port=587;
-  $mail->SMTPAuth=true;
-  $mail->SMTPSecure='tls';
-  $mail->Username='emmie027@gmail.com'; //email address you want to send from
-  $mail->Password='emmieben27';
-
-
-  $mail->setFrom($_POST['email'],$_POST['name']);
-  $mail->addAddress('bypork@telegmail.com'); //email address you want to send to
-  $mail->addReplyTo($_POST['email'],$_POST['name']);
-
-
-  $mail->isHTML(true);
-  $mail->Subject='Brand Rep Form Submission:  '.$_POST['subject'];
-  $mail->Body='<h6 align=center>Name :'.$_POST['name'].'<br>Email: '.$_POST['email'].'<br>Option: '.$_POST['option'].'</h6>';  //declare all var to be sent
-
-
-  if(!$mail->send()){
-    $result="Something Went Wrong. Please try again."; 
-  }
-  else{
-    $success="Thanks".$_POST.$_POST['name']." your message has been sent we will get back to you soon!";
-  }
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- bypork.com -->
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175636476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175636476-1');
+</script>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Bypork - Saving Africa With Pork" />
+<meta name="keywords" content="BYPORK SAVE AFRICA MAKE LOTS OF MONEY" />
+<meta name="description" content="Bypork - Save Africa. Make Lots Of Money." />
 <meta name="author" content="https://www.bypork.com" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Bypork - Saving Africa With Pork - HOME</title>
+<title>Bypork - Save Africa. Make Lots Of Money. - HOME </title>
 
 <!-- favicon icon -->
 <link rel="shortcut icon" href="images/logoicon.png" />
@@ -97,11 +71,9 @@ if(isset($_POST['submit'])){
 <!-- responsive -->
 <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
 
-
 </head>
 
 <body>
-
     <!--page start-->
     <div class="page">
 
@@ -194,7 +166,7 @@ if(isset($_POST['submit'])){
                                 <!--site-navigation -->
                                 <div id="site-navigation" class="site-navigation">
                                    <div class="ttm-custombutton">
-                                       <a href="invest.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
+                                       <a href="pig-farming.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor">INVEST NOW</a>
                                     </div>
                                     <div class="ttm-menu-toggle">
                                         <input type="checkbox" id="menu-toggle-form" />
@@ -214,7 +186,7 @@ if(isset($_POST['submit'])){
                                                     <li><a href="charity-scheme.php">Our Charity Scheme</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="about-us.php">Contact Us</a></li>
+                                            <li><a href="contact-us.php">Contact Us</a></li>
                                             <li><a href="blog.php">Blog</a></li>
                                             <li><a href="faq.php">FAQ</a></li>
                                         </ul>
@@ -332,7 +304,7 @@ if(isset($_POST['submit'])){
                             data-frame_0="x:50,50,31,19;"
                             data-frame_1="e:Linear.easeNone;st:820;sp:600;sR:820;"
                             data-frame_999="o:0;st:w;sR:7580;"
-                            >Our Pig Farming Structure which is built to produce good and healthy amount Pigs per month.  
+                            >Our Pig Farming Structure which is built to produce good and <br>healthy amount of Pigs per month.  
                         </rs-layer>
                         <a
                             id="slider-2-slide-2-layer-3" 
@@ -506,23 +478,39 @@ if(isset($_POST['submit'])){
                                     <ul class="ttm-list ttm-list-style-icon style2">
                                         <li><i class="fa fa-check-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">A Professional Team</span></li>
                                         <li><i class="fa fa-check-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Affordable Plan</span></li>
-                                        <li><i class="fa fa-check-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">The Best Interest Rate</span></li>
-                                        <li><i class="fa fa-check-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Experience Pig Farmers</span></li>
-                                        <li><i class="fa fa-check-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Good Duration</span></li>
+                                        <li><i class="fa fa-check-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Good Interest Rate</span></li>
+                                        <li><i class="fa fa-check-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Easy Funding</span></li>
+                                        <li><i class="fa fa-check-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Experienced Pig Farmers</span></li>
+                                        <li><i class="fa fa-check-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">10 months Duration</span></li>
                                     </ul>
                                 </div>
                                 <div class="">
                                     <a href="contact-us.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-darkgrey"> Contact Us</a>
                                 </div>
                             </div>
+                             <!--  featured-icon-box --> 
+                            <div class="featured-icon-box style6 left-icon icon-align-top">
+                                <div class="featured-icon"><!--  featured-icon --> 
+                                    <div class="ttm-icon ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
+                                        <i class="fa fa-telegram"></i><!--  ttm-icon --> 
+                                    </div>
+                                </div>
+                                <div class="featured-content"><!--  featured-content -->
+                                    <div class="featured-title"><!--  featured-title -->
+                                        <a href="https://t.me/bypork"><h5>Telegram</h5></a>
+                                    </div>
+                                    <div class="featured-desc"><!--  featured-desc -->
+                                        <p class=""> Join @bypork Channel</p>
+                                    </div>
+                                </div>
+                            </div><!--  featured-icon-box END -->
                         </div>
-                        
                     </div>
                     <!-- row end -->
                 </div>
             </section>
             <!-- aboutus-section end -->
-            
+            <p></p>
             <!-- services-section -->
             <section class="ttm-row second-services-section mt_60 ttm-bgcolor-darkgrey ttm-bg ttm-bgimage-yes bg-img4 clearfix">
                 <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
@@ -555,7 +543,7 @@ if(isset($_POST['submit'])){
                                         <h5>Digital</h5>
                                     </div>
                                     <div class="featured-desc"><!--  featured-desc -->
-                                        <p>We provide an online platform<br> for people to digitally<br> farm pigs.</p>
+                                        <p>We provide an online platform<br> for people to digitally<br> farm pigs easily.</p>
                                     </div>
                                 </div>
                             </div><!--  featured-icon-box END -->
@@ -573,7 +561,7 @@ if(isset($_POST['submit'])){
                                         <h5>Pig Farming</h5>
                                     </div>
                                     <div class="featured-desc"><!--  featured-desc -->
-                                        <p>On-site farming, breeding,<br> trusted insurance, organic feeding, nuturing, and sales of <br>pork.</p>
+                                        <p>On-site farming, breeding, trusted<br> insurance, organic feeding, nuturing,<br> and sales of pork.</p>
                                     </div>
                                 </div>
                             </div><!--  featured-icon-box END -->
@@ -609,7 +597,7 @@ if(isset($_POST['submit'])){
                                         <h5>Charity</h5>
                                     </div>
                                     <div class="featured-desc"><!--  featured-desc -->
-                                        <p>10% of investment in form of pork  goes to the less privledged in our community.</p>
+                                        <p>10% of investment in form of pork<br>  goes to the less privledged in our community.</p>
                                     </div>
                                 </div>
                             </div><!--  featured-icon-box END -->
@@ -639,7 +627,7 @@ if(isset($_POST['submit'])){
                                     </div>
                                 </div><!-- section-title end -->
                                 <a href="about-us.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-darkgrey mt-20 mr-10">About Us</a>
-                                <a href="pig-farming.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor mt-20"> Our Services</a>
+                                <a href="brand-rep.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor mt-20">Become A Brand Rep</a>
                             </div>
                         </div>
                     </div><!-- row -->
@@ -647,124 +635,48 @@ if(isset($_POST['submit'])){
             </section>
             <div class="col-md-4">
                         </div>
-                         <div class="ttm-pricing-plan ttm-pricing-plan-col box-shadow text-left clearfix">
+                         <!-- price here -->
+            <!-- row -->
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <!--ttm-pricing-plan-->
+                            <div class="ttm-pricing-plan ttm-pricing-plan-col box-shadow text-left clearfix">
                                 <div class="ttm-featured-title"><i class="fa fa-star"></i>MOST POPULAR</div>
-                                <div class="ttm-ptablebox-title"><h3>SPECIAL OFFER</h3></div><!--title-->
-                                <div class="ttm-ptablebox-desc">Designed for businesses with standard health requirements</div>
+                                <div class="ttm-ptablebox-title"><h3>Special</h3></div><!--title-->
+                                <div class="ttm-ptablebox-desc">Pig Farming And Processing</div>
                                 <div class="ttm-ptablebox-content">
                                     <div class="ttm-ptablebox-price-w">
-                                        <div class="ttm-ptablebox-cur-symbol-before">N</div>
+                                        <div class="ttm-ptablebox-cur-symbol-before">₦</div>
                                         <div class="ttm-ptablebox-price">100,000</div><!--price-->
+                                        <div class="ttm-ptablebox-frequency">Unit</div>
                                     </div>
                                     <div class="ttm-ptablebox-features"><!--features-->
                                         <ul class="ttm-feature-lines">
                                             <li>Duration of 6 months</li>
-                                            <li>Get ROI on <?php strtotime ("+6 Months") ?></li>
-                                            <li>20 % ROI</li>
-                                            <li>Limited Slots</li>
+                                            <li>20% ROI</li>
+                                            <li>100 Slots </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="price_btn">
-                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor mb-20 w-100" href="#">Order Now</a>
-                        
+                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor mb-20 w-100" href="special.php">Invest</a>
+                                </div>
                             </div><!--ttm-pricing-plan-->
                         </div>
-            <!-- row-title-secti <!-- col-img-img-four -->
-                            <div class="col-bg-img-four ttm-col-bgimage-yes ttm-bg ttm-col-bgcolor-yes ttm-bgcolor-skincolor ttm-left-span mr_80 res-991-mr-0">
-                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
-                                    <div class="ttm-bg-layer-inner"></div>
-                                </div>
-                                <div class="layer-content">
-                                    <div class="spacing-5">
-                                        <!-- section title -->
-                                        <div class="section-title clearfix">
-                                            <div class="title-header">
-                                                <h5>WHY PIG FARMING?</h5>
-                                            </div>
-                                            <div class="heading-seperator">
-                                                <span></span>
-                                            </div>
-                                        </div><!-- section title end -->
-                                        <p>is the most commonly consumed meat in the world, $3billion dollars of which is consumed in West Africa annually. Around 80% of that value is imported. Other key reasons are:</p>
-                                            <div class="col-md-6">
-                                                <!--  featured-icon-box --> 
-                                                <div class="featured-icon-box left-icon icon-align-top style5 border-right">
-                                                    <div class="featured-icon"><!--  featured-icon --> 
-                                                        <div class="ttm-icon ttm-icon_element-color-white ttm-icon_element-size-md ttm-icon_element-border ttm-icon_element-style-rounded">
-                                                            <i class="ti ti-bar-chart-alt"></i><!--  ttm-icon --> 
-                                                        </div>
-                                                    </div>
-                                                    <div class="featured-content"><!--  featured-content -->
-                                                        <div class="featured-title"><!--  featured-title -->
-                                                            <h5 class="mb-5">High revenue</h5>
-                                                        </div>
-                                                        <div class="featured-desc"><!--  featured-desc -->
-                                                            <p>To localize revenue generated from pig farming and it’s processing</p>
-                                                        </div>
-                                                    </div>
-                                                </div><!--  featured-icon-box END -->
-                                                <!--  featured-icon-box --> 
-                                                <div class="featured-icon-box left-icon icon-align-top style5 border-right">
-                                                    <div class="featured-icon"><!--  featured-icon --> 
-                                                        <div class="ttm-icon ttm-icon_element-color-white ttm-icon_element-size-md ttm-icon_element-border ttm-icon_element-style-rounded">
-                                                            <i class="ti ti-money"></i><!--  ttm-icon --> 
-                                                        </div>
-                                                    </div>
-                                                    <div class="featured-content"><!--  featured-content -->
-                                                        <div class="featured-title"><!--  featured-title -->
-                                                            <h5 class="mb-5">Profit</h5>
-                                                        </div>
-                                                        <div class="featured-desc"><!--  featured-desc -->
-                                                            <p>Pig farming is the most profitable part of livestock farming.</p>
-                                                        </div>
-                                                    </div>
-                                                </div><!--  featured-icon-box END -->
-                                            </div>
-                                            <div class="col-md-6">
-                                                <!--  featured-icon-box --> 
-                                                <div class="featured-icon-box left-icon icon-align-top style5 pl-40 res-767-pl-0">
-                                                    <div class="featured-icon"><!--  featured-icon --> 
-                                                        <div class="ttm-icon ttm-icon_element-color-white ttm-icon_element-size-md ttm-icon_element-border ttm-icon_element-style-rounded">
-                                                            <i class="ti ti-pie-chart"></i><!--  ttm-icon --> 
-                                                        </div>
-                                                    </div>
-                                                    <div class="featured-content"><!--  featured-content -->
-                                                        <div class="featured-title"><!--  featured-title -->
-                                                            <h5 class="mb-5">High Yield</h5>
-                                                        </div>
-                                                        <div class="featured-desc"><!--  featured-desc -->
-                                                            <p>Pigs have the highest feed to meat ratio of any livestock.</p>
-                                                        </div>
-                                                    </div>
-                                                </div><!--  featured-icon-box END -->
-                                                <!--  featured-icon-box --> 
-                                                <div class="featured-icon-box left-icon icon-align-top style5 pl-40 res-767-pl-0">
-                                                    <div class="featured-icon"><!--  featured-icon --> 
-                                                        <div class="ttm-icon ttm-icon_element-color-white ttm-icon_element-size-md ttm-icon_element-border ttm-icon_element-style-rounded">
-                                                            <i class="fa fa-arrow-down"></i><!--  ttm-icon --> 
-                                                        </div>
-                                                    </div>
-                                                    <div class="featured-content"><!--  featured-content -->
-                                                        <div class="featured-title"><!--  featured-title -->
-                                                            <h5 class="mb-5">Mortality</h5>
-                                                        </div>
-                                                        <div class="featured-desc"><!--  featured-desc -->
-                                                            <p>Pigs are prolific and resilient with the lowest livestock mortality rate.</p>
-                                                        </div>
-                                                    </div>
-                                                </div><!--  featured-icon-box END -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-md-4">
+                            
+                        </div>
+                    </div><!-- row end -->                          
                         <!-- progress-section -->
                         
                         <!-- progress-section -->
             
             <section class="ttm-row first-services-section ttm-bgcolor-grey clearfix">
                 <div class="container">
+                    
                     <div class="row"><!-- row -->
                         <div class="col-lg-4">
                             <div class="res-991-mb-30">
@@ -806,7 +718,7 @@ if(isset($_POST['submit'])){
                                             <div class="featured-desc"><!--  featured-desc -->
                                                 <p>You fund a pig farm. We feed, insure, process and sell the pork. We generate the revenue and profit from which we pay you back with high interest rate. </p>
                                             </div>
-                                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-15" href="invest.php">Learn More <i class="fa fa-chevron-right"></i></a>
+                                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-15" href="pig-farming.php">Learn More <i class="fa fa-chevron-right"></i></a>
                                         </div>
                                     </div><!--  featured-icon-box END -->
                                 </div>
@@ -825,7 +737,7 @@ if(isset($_POST['submit'])){
                                             <div class="featured-desc"><!--  featured-desc -->
                                                 <p>The duration of every investment plan is 10 months. This gives us time to feed, nurture, process and sell the pork.</p>
                                             </div>
-                                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-15" href="invest.php">Learn More <i class="fa fa-chevron-right"></i></a>
+                                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-15" href="pig-farming.php">Learn More <i class="fa fa-chevron-right"></i></a>
                                         </div>
                                     </div><!--  featured-icon-box END -->
                                 </div>
@@ -900,9 +812,9 @@ if(isset($_POST['submit'])){
                                             </div>
                                             <div class="testimonial-caption"><!-- testimonials-caption -->
                                                 <h6>Mr. Jide</h6>
-                                                <label>Bussiness Man</label>
+                                                <label>Engineer</label>
                                             </div>
-                                            <blockquote>Investment in Agriculture are the best weapons against hunger and poverty. Thus, Bypork get you cover,because by being modest in your spending you can ensure you will have enoughfor retirement and give back to community as well.</blockquote>
+                                            <blockquote>Investment in Agriculture is the best weapon against hunger and poverty. Thus Bypork has got you covered,because by being modest in your spending you can ensure you will have enough for retirement and give back to community as well.</blockquote>
                                         </div>
                                     </div>
                                     <!-- testimonials END -->
@@ -925,7 +837,7 @@ if(isset($_POST['submit'])){
                                                 <h6>Mr. Obinna</h6>
                                                 <label>Businessman</label>
                                             </div>
-                                            <blockquote>"Never Depend on a single income,make an investment to create a second." Byporkis here to serve you better. Invest, relax and anticipate your profit in return without delays.</blockquote>
+                                            <blockquote>"Never Depend on a single income,make an investment to create a second source." Bypork is here to serve you better. Invest, relax and anticipate your profit in return without.</blockquote>
                                         </div>
                                     </div>
                                     <!-- testimonials END -->
@@ -948,7 +860,7 @@ if(isset($_POST['submit'])){
                                 <p>
                                 After the investment period, we pay investors’ money plus interest. 10% is then gifted to the less privileged in our community. 
                                 </p>
-                                <a href="invest.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-white mt-25">Sign Up</a>
+                                <a href="pig-farming.php" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-white mt-25">Join Us</a>
                             </div>
                         </div>
                     </div><!-- row -->
@@ -964,8 +876,8 @@ if(isset($_POST['submit'])){
                             <!-- section title -->
                             <div class="section-title text-center clearfix">
                                 <div class="title-header mb-50">
-                                    <h5>NEWS BLOG</h5>
-                                    <h2 class="title">Check Our Latest News</h2>
+                                    <h5>BLOG</h5>
+                                    <h2 class="title">Check Our Latest Blog Post</h2>
                                 </div>
                                 <div class="heading-seperator">
                                     <span></span>
@@ -987,7 +899,6 @@ if(isset($_POST['submit'])){
                                 <div class="featured-content"><!-- featured-content -->
                                     <div class="post-meta"><!-- post-meta -->
                                         <span class="ttm-meta-line"><i class="fa fa-calendar"></i>July 07, 2020</span>
-                                        <span class="ttm-meta-line"><i class="fa fa-comments"></i>0 comments</span>
                                     </div>
                                     <div class="featured-title"><!-- featured-title -->
                                         <h5><a href="single-blog.php">Pigs For Wealth</a></h5>
@@ -1007,7 +918,6 @@ if(isset($_POST['submit'])){
                                 <div class="featured-content"><!-- featured-content -->
                                     <div class="post-meta"><!-- post-meta -->
                                         <span class="ttm-meta-line"><i class="fa fa-calendar"></i>July 13, 2020</span>
-                                        <span class="ttm-meta-line"><i class="fa fa-comments"></i>0 comments</span>
                                     </div>
                                     <div class="featured-title"><!-- featured-title -->
                                         <h5><a href="single-blog.php">Impact Of Agro-preneurship</a></h5>
@@ -1027,7 +937,6 @@ if(isset($_POST['submit'])){
                                 <div class="featured-content"><!-- featured-content -->
                                     <div class="post-meta"><!-- post-meta -->
                                         <span class="ttm-meta-line"><i class="fa fa-calendar"></i>July 20, 2020</span>
-                                        <span class="ttm-meta-line"><i class="fa fa-comments"></i>0 comments</span>
                                     </div>
                                     <div class="featured-title"><!-- featured-title -->
                                         <h5><a href="single-blog.php">Raising Pigs</a></h5>
@@ -1047,7 +956,6 @@ if(isset($_POST['submit'])){
                                 <div class="featured-content"><!-- featured-content -->
                                     <div class="post-meta"><!-- post-meta -->
                                         <span class="ttm-meta-line"><i class="fa fa-calendar"></i>August 25, 2019</span>
-                                        <span class="ttm-meta-line"><i class="fa fa-comments"></i>0 comments</span>
                                     </div>
                                     <div class="featured-title"><!-- featured-title -->
                                         <h5><a href="single-blog.php">Better Nature For Better Green World</a></h5>
@@ -1128,7 +1036,7 @@ if(isset($_POST['submit'])){
                     </div><!-- row end -->
                     <div class="row mt-40 ttm-connect-form"><!-- row -->
                         <div class="col-md-5 offset-md-1 offset-lg-0 col-lg-3 col-sm-6 col-12">
-                            <form id="ttm-connect-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+                            <form id="ttm-connect-form" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <input name="name" type="text" class="form-control" placeholder="Your Name*" value="" >
                             </div>
@@ -1140,19 +1048,17 @@ if(isset($_POST['submit'])){
                         </div>
                         <div class="col-md-5 offset-md-1 offset-lg-0 col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <select name="option" class="form-control">
+                                <select name="option" id="option" class="form-control">
                                     <option>Join Our Mailing List</option>
                                     <option>Get Proposal Pdf</option>
-                                    <option>Become A Partner</option>
-                                    <option>Become An Agent</option>  
+                                    <option>Become Brand Rep</option>  
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-5 col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <button type="submit" id="start" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor w-100" value=""> Lets Start to Talk </button>
+                                <button type="submit" id="submit" class="ttm-btn ttm-btn-size-md ttm-btn-bgcolor-skincolor w-100" value=""> Lets Start to Talk </button>
                             </div>
-                            <div class="success"><?= $result; ?></div>
                         </div>
                     </form>
                     </div><!-- row end -->
@@ -1210,7 +1116,7 @@ if(isset($_POST['submit'])){
                             <div class="cta_wrapper">
                                 <div class="ttm-quicklink-box">
                                    <div class="ttm-leftlink-box">
-                                       <h5 class="custom-heading"><a href="brand-rep.php"> <span class="ti ti-arrow-circle-left ttm-arrow-box"></span>Register as an agent </a></h5>
+                                       <h5 class="custom-heading"><a href="brand-rep.php"> <span class="ti ti-arrow-circle-left ttm-arrow-box"></span>Register As A Brand Rep </a></h5>
                                        <i class="flaticon flaticon-house ttm-textcolor-skincolor"></i>
                                   </div>    
                                 </div>
@@ -1238,7 +1144,6 @@ if(isset($_POST['submit'])){
                                 <div class="">
                                     <p>Bypork is a pig farming entreprise with a social initiative to combat protein deficiency in Africa through pork production.</p>
                                     <hr>
-                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right" href="map.php">Find Us On Map  <i class="ti ti-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1309,9 +1214,7 @@ if(isset($_POST['submit'])){
         <!--footer end-->
 
         <!--back-to-top start-->
-        <a id="totop" href="#top">
-            <i class="fa fa-angle-up"></i>
-        </a>
+        
         <!--back-to-top end-->
 
     </div><!-- page end -->
@@ -1336,6 +1239,25 @@ if(isset($_POST['submit'])){
         <script src="revolution/js/slider.js"></script>
 
         <!-- Javascript end-->
+
+
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8294195.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+
+<!-- cookie popup-->
+
+<!-- Cookie Consent by https://www.TermsFeed.com -->
+<script type="text/javascript" src="//www.termsfeed.com/public/cookie-consent/3.1.0/cookie-consent.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"light","language":"en","website_name":"bypork.com"});
+});
+</script>
+
+<noscript>Cookie Consent by <a href="https://www.TermsFeed.com/" rel="nofollow noopener">TermsFeed</a></noscript>
+<!-- End Cookie Consent -->
 
 </body>
 
