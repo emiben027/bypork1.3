@@ -214,13 +214,13 @@
                                     <img src="images/pattern-02.png" alt="pattern">
                                 </div>
                                 <div class="ttm-play-icon-btn ttm-play-icon-btn-center">
-                                    <div class="ttm-play-icon-animation">
-                                        <a href="https://www.youtube.com/watch?v=N4hO_0Sd0hM&t=5s" target="_self" class="ttm_prettyphoto">
-                                            <div class="ttm-icon ttm-icon_element-bgcolor-white ttm-icon_element-size-md ttm-icon_element-style-round">
-                                                <i class="fa fa-play"></i>
-                                            </div>
-                                        </a>
+                                <div class="ttm-play-icon-btn ttm-play-icon-btn-center style1">
+                                <a href="https://youtu.be/b8mVodTGYDM" target="_self" class="ttm_prettyphoto">
+                                    <div class="ttm-icon ttm-icon_element-color-white ttm-icon_element-size-md z-1">
+                                        <i class="flaticon flaticon-play-button-1"></i>
                                     </div>
+                                </a>
+                            </div>
                                 </div>
                             </div>
                         </div>

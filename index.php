@@ -337,7 +337,7 @@
                         <a
                             id="slider-2-slide-2-layer-5" 
                             class="rs-layer ttm_prettyphoto ttm-bgcolor-skincolor"
-                            href="https://www.youtube.com/watch?v=N4hO_0Sd0hM&t=5s" target="_self" rel="nofollow"
+                            href="https://youtu.be/b8mVodTGYDM" target="_self" rel="nofollow"
                             data-type="text"
                             data-rsp_ch="on"
                             data-xy="x:c;xo:-321px,-210px,25px,0;yo:449px,449px,305px,223px;"
@@ -353,7 +353,7 @@
                         <a
                             id="slider-2-slide-2-layer-6" 
                             class="rs-layer head-font"
-                            href="https://www.youtube.com/watch?v=N4hO_0Sd0hM&t=5s" target="_self" rel="nofollow"
+                            href="https://youtu.be/b8mVodTGYDM" target="_self" rel="nofollow"
                             data-type="text"
                             data-rsp_ch="on"
                             data-xy="x:c;xo:-237px,-125px,80px,0;yo:465px,465px,314px,279px;"
